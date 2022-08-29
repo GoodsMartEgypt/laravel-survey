@@ -15,7 +15,7 @@ class Question extends Model implements QuestionContract
      *
      * @var array
      */
-    protected $fillable = ['type', 'options', 'content', 'rules', 'survey_id'];
+    protected $fillable = ['type', 'options', 'content', 'rules', 'survey_id','has_comment','comment_placeholder'];
 
     protected $casts = [
         'rules' => 'array',

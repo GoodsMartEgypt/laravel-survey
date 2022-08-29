@@ -28,7 +28,7 @@ class Answer extends Model implements AnswerContract
      *
      * @var array
      */
-    protected $fillable = ['value', 'question_id', 'entry_id'];
+    protected $fillable = ['value', 'question_id', 'entry_id','comment'];
 
     /**
      * The entry the answer belongs to.

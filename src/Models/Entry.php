@@ -111,7 +111,7 @@ class Entry extends Model implements EntryContract
      * @param  array  $values
      * @return $this
      */
-    public function fromArray(array $values)
+    public function fromArray(array $values,$comment=null)
     {
         foreach ($values as $key => $value) {
             if ($value === null) {
@@ -125,9 +125,10 @@ class Entry extends Model implements EntryContract
             }
 
             $this->answers->add($answer_class::make([
-                'question_id' => substr($key, 1),
+                'question_id' => $key,
                 'entry_id' => $this->id,
                 'value' => $value,
+                'comment' => $comment
             ]));
         }
 
