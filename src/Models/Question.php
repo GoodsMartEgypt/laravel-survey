@@ -20,6 +20,7 @@ class Question extends Model implements QuestionContract
     protected $casts = [
         'rules' => 'array',
         'options' => 'array',
+        'has_comment' => 'boolean',
     ];
 
     /**
