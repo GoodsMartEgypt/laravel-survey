@@ -21,6 +21,8 @@ class CreateQuestionsTable extends Migration
             $table->string('type')->default('text');
             $table->json('options')->nullable();
             $table->json('rules')->nullable();
+            $table->boolean('has_comment');
+            $table->string('comment_placeholder')->nullable();
             $table->timestamps();
         });
     }
