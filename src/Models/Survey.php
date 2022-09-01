@@ -29,7 +29,7 @@ class Survey extends Model implements SurveyContract
      *
      * @var array
      */
-    protected $fillable = ['name', 'settings'];
+    protected $fillable = ['name', 'settings','start_date','end_date','survey_type_id'];
 
     /**
      * The attributes that should be casted.
@@ -68,6 +68,11 @@ class Survey extends Model implements SurveyContract
     public function entries()
     {
         return $this->hasMany(get_class(app()->make(Entry::class)));
+    }
+
+    public function surveyTyes()
+    {
+        return $this->hasMany(get_class(app()->make(SurveyType::class)),'survey_type_id');
     }
 
     /**
