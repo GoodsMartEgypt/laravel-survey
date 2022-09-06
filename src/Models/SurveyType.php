@@ -4,8 +4,7 @@ namespace MattDaneshvar\Survey\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use MattDaneshvar\Survey\Contracts\SurveyType as SurveyTypeContract;
-use MattDaneshvar\Survey\Contracts\Entry;
-use MattDaneshvar\Survey\Contracts\Question;
+
 
 class SurveyType extends Model implements SurveyTypeContract
 {
@@ -17,7 +16,7 @@ class SurveyType extends Model implements SurveyTypeContract
     public function __construct(array $attributes = [])
     {
         if (! isset($this->table)) {
-            $this->setTable(config('survey.database.tables.survey_types'));
+            $this->setTable(config('survey.database.tables.survey_type'));
         }
 
         parent::__construct($attributes);

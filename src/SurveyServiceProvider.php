@@ -36,8 +36,8 @@ class SurveyServiceProvider extends ServiceProvider
             'create_entries_table',
             'create_answers_table',
             'create_sections_table',
-            'create_survey_types_table',
-            'create_survey_users_table',
+            'create_survey_type_table',
+            'create_survey_user_table',
         ]);
     }
 
