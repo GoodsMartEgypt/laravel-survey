@@ -72,7 +72,7 @@ class Survey extends Model implements SurveyContract
 
     public function surveyType()
     {
-        return $this->hasMany(get_class(app()->make(SurveyType::class)),'survey_type_id');
+        return $this->belongsTo(get_class(app()->make(SurveyType::class)),'survey_type_id');
     }
 
     /**
