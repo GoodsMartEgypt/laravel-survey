@@ -17,7 +17,7 @@ class Entry extends Model implements EntryContract
      *
      * @var array
      */
-    protected $fillable = ['survey_id', 'participant_id'];
+    protected $fillable = ['survey_id', 'participant_id' ,'is_skipped'];
 
     /**
      * Boot the entry.

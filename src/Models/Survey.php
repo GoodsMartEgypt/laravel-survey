@@ -29,7 +29,7 @@ class Survey extends Model implements SurveyContract
      *
      * @var array
      */
-    protected $fillable = ['name', 'settings','start_date','end_date','survey_type_id'];
+    protected $fillable = ['name', 'settings','start_date','end_date','survey_type_id' ,'is_skippable'];
 
     /**
      * The attributes that should be casted.
@@ -38,6 +38,8 @@ class Survey extends Model implements SurveyContract
      */
     protected $casts = [
         'settings' => 'array',
+        'start_date'=> 'datetime',
+        'end_date'=> 'datetime'
     ];
 
     /**

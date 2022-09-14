@@ -16,7 +16,10 @@ class CreateEntriesTable extends Migration
         Schema::create(config('survey.database.tables.entries'), function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('survey_id');
-            $table->unsignedInteger('participant_id')->nullable();
+            $table->unsignedInteger('participant_id');
+            $table->boolean('is_skipped');
+
+
             $table->timestamps();
         });
     }
