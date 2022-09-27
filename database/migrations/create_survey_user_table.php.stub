@@ -17,6 +17,7 @@ class CreateSurveyUserTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('survey_id');
             $table->unsignedInteger('user_id');
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

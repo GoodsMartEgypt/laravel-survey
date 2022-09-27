@@ -38,7 +38,7 @@ class SurveyServiceProvider extends ServiceProvider
             'create_sections_table',
             'create_survey_type_table',
             'create_survey_user_table',
-            'create_survey_user_table'
+
         ]);
     }
 
@@ -55,7 +55,6 @@ class SurveyServiceProvider extends ServiceProvider
         $this->app->bind(\MattDaneshvar\Survey\Contracts\Section::class, \MattDaneshvar\Survey\Models\Section::class);
         $this->app->bind(\MattDaneshvar\Survey\Contracts\Survey::class, \MattDaneshvar\Survey\Models\Survey::class);
         $this->app->bind(\MattDaneshvar\Survey\Contracts\SurveyType::class, \MattDaneshvar\Survey\Models\SurveyType::class);
-        $this->app->bind(\MattDaneshvar\Survey\Contracts\SurveyUser::class, \MattDaneshvar\Survey\Models\SurveyUser::class);
 
     }
 
