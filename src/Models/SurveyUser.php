@@ -3,11 +3,13 @@
 namespace MattDaneshvar\Survey\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use MattDaneshvar\Survey\Contracts\SurveyUser as SurveyUserContract;
 
 
 class SurveyUser extends Model implements SurveyUserContract
 {
+    use SoftDeletes;
     /**
      * SurveyType constructor.
      *
